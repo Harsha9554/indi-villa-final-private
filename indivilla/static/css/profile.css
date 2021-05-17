@@ -1,0 +1,53 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+}
+
+.profile img {
+  margin-right: 10px;
+}
+
+.profile a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 700;
+}
+
+.p-dd {
+  position: relative;
+}
+
+.p-dd .p-dd-btn {
+  cursor: pointer;
+}
+
+.p-dd .p-dd-c {
+  display: none;
+  border-radius: 3px;
+  position: absolute;
+  min-width: 160px;
+  background-color: #343D45;
+  z-index: 1;
+}
+
+.p-dd .p-dd-c a {
+  color: #DDDDDD;
+  text-decoration: none;
+  border-radius: 3px;
+  display: block;
+  margin: 3px;
+  padding: 5px 10px;
+}
+
+.p-dd .p-dd-c a:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+
+.p-dd:hover .p-dd-c {
+  display: block;
+}

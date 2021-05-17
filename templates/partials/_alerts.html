@@ -1,0 +1,14 @@
+{% if messages %}
+    {% for message in messages %}
+            <div id="message" class="parent-alert">
+                <div class="alert alert-{{ message.tags }} alert-dismissable">
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                            ERROR: 
+                        {% else %}
+                            {{ message.tags | title }}
+                        {% endif %}
+                    {{ message }}
+                </div>
+            </div>
+    {% endfor %}
+{% endif %}

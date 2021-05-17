@@ -1,0 +1,141 @@
+@import "nav.css";
+@import "profile.css";
+@import "alert.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  background-color: rgba(30, 40, 49, 0.9);
+}
+
+
+main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 155px;
+  background: #222831;
+  min-height: 50vh;
+  width: 35%;
+  border-radius: 3px;
+}
+
+.jiv {
+  color: #DDDDDD;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
+.jiv h1 {
+  font-size: 32px;
+}
+
+.checkbox {
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+.checkbox input {
+  margin-right: 5px;
+}
+
+.checkbox label {
+  margin-right: 15px;
+  color: #F05454;
+}
+
+input[type="name"] {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 24px;
+  padding: 8px 40px 8px 30px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 24px;
+  padding: 8px 40px 8px 30px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.continue-button {
+  position: relative;
+  top: 30px;
+  left: 60px;
+  text-decoration: none;
+  background-color: #F05454;
+  font-weight: 800;
+  font-size: 24px;
+  color: #222831;
+  padding: 8px 150px 8px 150px;
+  border-radius: 3px;
+}
+
+.aam {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  color: #DDDDDD;
+  font-size: 16px;
+}
+
+.aam a {
+  text-decoration: none;
+  color: #F05454;
+}
+
+.go {
+  padding: 5px 45px 8px 45px;
+  border-radius: 3px;
+  position: relative;
+  top: 20px;
+  left: 60px;
+  border: none;
+  background-color: #DDDDDD;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+  color: #222831;
+}
+
+.go img {
+  position: relative;
+  background-color: #DDDDDD;
+  margin-right: 20px;
+  top: 5px;
+}
+
+.or {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 65px;
+}
+
+.fp {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 330px;
+}
+
+.fp .fp-link {
+  color: #F05454;
+  text-decoration: none;
+}

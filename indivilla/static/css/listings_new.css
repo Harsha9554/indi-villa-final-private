@@ -1,0 +1,395 @@
+@import "nav.css";
+@import "profile.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+
+main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 40, 49, 0.9);
+}
+
+
+
+/* .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+}
+
+.profile img {
+  margin-right: 10px;
+}
+
+.profile a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 700;
+} */
+
+.divider {
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.main3 {
+  min-height: 40vh;
+  background-color: #F05454;
+  position: relative;
+}
+
+.main3 div {
+  padding-top: 70px;
+  margin-right: 150px;
+}
+
+#main3 {
+  display: flex;
+}
+
+.footer-brand {
+  top: 0;
+  position: relative;
+  padding-left: 50px;
+  font-weight: 900;
+  color: #222831;
+  font-size: 32px;
+  flex-grow: 4;
+}
+
+.AC {
+  flex-grow: 1;
+}
+
+.BC {
+  flex-grow: 1;
+}
+
+.CC {
+  flex-grow: 2;
+}
+
+.icon-links img {
+  position: relative;
+  margin-right: 50px;
+}
+
+#icon-links {
+  display: flex;
+}
+
+.A {
+  position: relative;
+  list-style-type: none;
+}
+
+.A h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.A a {
+  display: inline;
+  text-decoration: none;
+  color: #222831;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.B {
+  position: relative;
+  list-style: none;
+}
+
+.B h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.B a {
+  display: inline;
+  text-decoration: none;
+  color: #222831;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.C {
+  position: relative;
+  list-style: none;
+}
+
+.C h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  position: relative;
+  background: #222831;
+  min-height: 250vh;
+  width: 20%;
+  margin: 30px;
+  border-radius: 5px;
+}
+
+.card-panel {
+  position: relative;
+  background: #222831;
+  min-height: 250vh;
+  width: 70%;
+  margin: 30px;
+  border-radius: 5px;
+}
+
+.filters-h h1 {
+  margin: 10px;
+  color: #DDDDDD;
+}
+
+hr {
+  margin-top: 5px;
+  color: #343D45;
+}
+
+.filter-section {
+  margin: 20px 15px;
+}
+
+.filter-section h1 {
+  background: #343D45;
+  color: #DDDDDD;
+  padding: 5px 10px;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.filter-section .choices {
+  background: #DDDDDD;
+  color: #222831;
+  padding: 5px;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.filter-section .choices label {
+  padding: 3px;
+  font-weight: 600;
+}
+
+.filter-section .choices .choice {
+  padding: 3px;
+}
+
+.card {
+  display: flex;
+  background-color: #DDDDDD;
+  margin: 35px;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.card .card-image {
+  position: relative;
+}
+
+.card .card-image .loc-imag {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  background: rgba(34, 40, 49, 0.6);
+  color: #DDDDDD;
+  padding: 10px 19px;
+  font-weight: 600;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.card .card-image img {
+  border-radius: 3px;
+}
+
+.card:hover {
+  background-color: rgba(196, 196, 196, 0.95);
+}
+
+.details {
+  margin: 0px 50px;
+  width: 100%;
+}
+
+.details .card-title {
+  color: #222831;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.details .address {
+  font-size: 18px;
+  margin: 0px 0px 10px 0px;
+  color: #222831;
+  display: flex;
+  align-items: center;
+}
+
+.details .address img {
+  margin-right: 5px;
+}
+
+.status {
+  margin-bottom: 15px;
+}
+
+.status a {
+  margin-right: 15px;
+  text-decoration: none;
+  background-color: #F05454;
+  color: #222831;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.status a:hover {
+  background-color: #222831;
+  color: #DDDDDD;
+}
+
+.mini-card {
+  background-color: #222831;
+  width: 80%;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
+.mini-card i {
+  color: #DDDDDD;
+}
+
+.mini-card h1 {
+  color: #F05454;
+  font-size: 32px;
+}
+
+.mini-card h3 {
+  color: #DDDDDD;
+}
+
+.m-button {
+  margin: 15px 0px 5px 0px;
+}
+
+.p-dd {
+  position: relative;
+}
+
+.p-dd .p-dd-btn {
+  cursor: pointer;
+}
+
+.p-dd .p-dd-c {
+  display: none;
+  border-radius: 3px;
+  position: absolute;
+  min-width: 160px;
+  background-color: #343D45;
+  z-index: 1;
+}
+
+.p-dd .p-dd-c a {
+  color: #DDDDDD;
+  text-decoration: none;
+  border-radius: 3px;
+  display: block;
+  margin: 3px;
+  padding: 5px 10px;
+}
+
+.p-dd .p-dd-c a:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+
+.p-dd:hover .p-dd-c {
+  display: block;
+}
+
+.mini-b1 {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.mini-b1 i {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.mini-b2 {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.mini-b2 i {
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.card-button {
+  margin: 10px 0px;
+}
+
+.card-button a {
+  text-decoration: none;
+  background-color: #F05454;
+  color: #222831;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 160px;
+  border-radius: 3px;
+}
+
+.card-button a:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  bottom: 15px;
+}
+
+.pagination a{
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+.active {
+  color:#222831;
+  background-color:#F05454;
+}
+.disabled {
+  color: #DDDDDD;
+  background-color:#343D45;
+}

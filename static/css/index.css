@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+nav {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  background-color: #222831;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 5;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 24px;
+  color: #DDDDDD;
+}
+
+.brand a {
+  text-decoration: none;
+  color:  #DDDDDD;
+}
+
+.brand:hover {
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.nav-button {
+  background-color: #DDDDDD;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #222831;
+  border-radius: 3px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #F05454;
+}
+
+.divider {
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.main {
+  min-height: 80vh;
+  background-color: #DDDDDD;
+  position: relative;
+}
+
+.banner-title-1 {
+  position: absolute;
+  font-size: 70px;
+  text-align: center;
+  width: 700px;
+  color: #222831;
+  top: 85px;
+  left: 40px;
+}
+
+.banner-logo-1 {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
+.banner-button-1 {
+  position: absolute;
+  background-color: #222831;
+  text-decoration: none;
+  color: #DDDDDD;
+  font-size: 20px;
+  border-radius: 3px;
+  font-weight: 700;
+  padding: 15px 35px;
+  left: 285px;
+  bottom: 150px;
+}
+
+.banner-button-1:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+
+.main2 {
+  min-height: 80vh;
+  background-color: #222831;
+  position: relative;
+}
+
+.banner-title-2 {
+  position: absolute;
+  font-size: 90px;
+  color: #DDDDDD;
+  text-align: center;
+  width: 700px;
+  right: 100px;
+  top: 100px;
+}
+
+.banner-logo-2 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.banner-button-2 {
+  position: absolute;
+  background-color: #DDDDDD;
+  text-decoration: none;
+  color: #222831;
+  font-size: 20px;
+  border-radius: 3px;
+  font-weight: 700;
+  padding: 15px 35px;
+  bottom: 150px;
+  right: 350px;
+}
+
+.banner-button-2:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+
+.main3 {
+  min-height: 40vh;
+  background-color: #F05454;
+  position: relative;
+}
+
+.main3 div {
+  padding-top: 70px;
+  margin-right: 150px;
+}
+
+#main3 {
+  display: flex;
+}
+
+.footer-brand {
+  top: 0;
+  position: relative;
+  padding-left: 50px;
+  font-weight: 900;
+  color: #222831;
+  font-size: 32px;
+  flex-grow: 4;
+}
+
+.AC {
+  flex-grow: 1;
+}
+
+.BC {
+  flex-grow: 1;
+}
+
+.CC {
+  flex-grow: 2;
+}
+
+.icon-links img {
+  position: relative;
+  margin-right: 50px;
+}
+
+#icon-links {
+  display: flex;
+}
+
+.A {
+  position: relative;
+  list-style-type: none;
+}
+
+.A h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.A a {
+  display: inline;
+  text-decoration: none;
+  color: #222831;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.B {
+  position: relative;
+  list-style: none;
+}
+
+.B h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.B a {
+  display: inline;
+  text-decoration: none;
+  color: #222831;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.C {
+  position: relative;
+  list-style: none;
+}
+
+.C h1 {
+  color: #222831;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=main.css.map */

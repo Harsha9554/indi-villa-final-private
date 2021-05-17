@@ -1,0 +1,51 @@
+nav {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  background-color: #222831;
+  padding-left: 100px;
+  padding-right: 200px;
+  z-index: 5;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 24px;
+  color: #DDDDDD;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #DDDDDD;
+}
+.brand:hover {
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.nav-button {
+  background-color: #DDDDDD;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #222831;
+  border-radius: 3px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #F05454;
+  color: #222831;
+}
+.divider {
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 600;
+  font-size: 20px;
+}

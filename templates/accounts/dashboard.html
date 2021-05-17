@@ -1,0 +1,41 @@
+{% extends 'accounts_base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+{% endblock styles %}
+{% block content %}
+      <main>
+            <section class="greetings">
+                <div class="greeting">
+                    <h1>Welcome {{user.first_name}} {{user.last_name}}.</h1>
+                </div>
+                {% if contacts %}
+                        <p>Here are the property listings that you have inquired about</p>
+                    </section>
+                    <section class="enq">
+                            <div class="detail">
+                                <table class="detail-table2">
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:40%">
+                                    <col style="width:50%">
+                                </colgroup>
+                                    {% for contact in contacts %}
+                                    <tr>
+                                        <td class="table-image fa-lg">
+                                            {{ contact.id }}
+
+                                        </td>
+                                        <td>{{ contact.listing }}</td>
+                                        <td>
+                                            <a href="{% url "listing" contact.listing_id %}">View Listing</a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                {% else %}
+                <p>You have not made any inquiries</p>
+                {% endif %}
+                    </div>
+            </section>
+        </main>
+{% endblock content %}

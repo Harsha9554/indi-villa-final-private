@@ -1,0 +1,146 @@
+@import "alert.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  background-color: rgba(30, 40, 49, 0.9);
+}
+
+nav {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  background-color: #222831;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 5;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 24px;
+  color: #DDDDDD;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #DDDDDD;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.nav-button {
+  background-color: #DDDDDD;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #222831;
+  border-radius: 3px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.divider {
+  text-decoration: none;
+  color: #DDDDDD;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 50px;
+  background: #222831;
+  min-height: 80vh;
+  width: 35%;
+  border-radius: 3px;
+}
+
+.jiv {
+  color: #DDDDDD;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 140px;
+}
+
+.jiv h1 {
+  font-size: 32px;
+}
+
+.go {
+  padding: 5px 45px 8px 45px;
+  border-radius: 3px;
+  position: relative;
+  top: 20px;
+  left: 60px;
+  border: none;
+  background-color: #DDDDDD;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+  color: #222831;
+}
+
+.go img {
+  position: relative;
+  background-color: #DDDDDD;
+  margin-right: 20px;
+  top: 5px;
+}
+
+.or {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 0px;
+  margin-left: 65px;
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 24px;
+  padding: 8px 40px 8px 30px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.continue-button {
+  position: relative;
+  top: 40px;
+  left: 60px;
+  text-decoration: none;
+  background-color: #F05454;
+  font-weight: 800;
+  font-size: 24px;
+  color: #222831;
+  padding: 8px 150px 8px 150px;
+  border-radius: 3px;
+}
+
+.aam {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  color: #DDDDDD;
+  font-size: 16px;
+}
+
+.aam a {
+  text-decoration: none;
+  color: #F05454;
+}

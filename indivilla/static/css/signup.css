@@ -1,0 +1,89 @@
+@import "profile.css";
+@import "nav.css";
+@import "alert.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  background-color: rgba(30, 40, 49, 0.9);
+}
+
+main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 20px;
+  background: #222831;
+  min-height: 87vh;
+  width: 35%;
+  border-radius: 3px;
+}
+
+.jiv {
+  color: #DDDDDD;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 140px;
+}
+
+.jiv h1 {
+  font-size: 32px;
+}
+
+
+
+input[type="email"],input[type="password"] {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 24px;
+  padding: 8px 40px 8px 30px;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 24px;
+  padding: 8px 40px 8px 30px;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.continue-button {
+  position: relative;
+  top: 30px;
+  left: 60px;
+  text-decoration: none;
+  background-color: #F05454;
+  font-weight: 800;
+  font-size: 24px;
+  color: #222831;
+  padding: 8px 150px 8px 150px;
+  border-radius: 3px;
+}
+
+.aam {
+  position: absolute;
+  bottom: 15px;
+  left: 60px;
+  color: #DDDDDD;
+  font-size: 16px;
+}
+
+.aam a {
+  text-decoration: none;
+  color: #F05454;
+}
