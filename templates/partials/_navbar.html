@@ -7,8 +7,8 @@
             </a>
     </div>
     <ul class="links">
-        <li><a class="nav-button"href="">About</a></li>
         <li><a class="nav-button"href="{% url "listings" %}">Listings</a></li>
+        <li><a class="nav-button"href="{% url "commission" %}">Comission</a></li>
         <li><a class="nav-button"href="http://localhost:8000/admin/">Admin</a></li>
         <li><a class="divider" href="">I</a></li>
         {% if user.is_authenticated %}

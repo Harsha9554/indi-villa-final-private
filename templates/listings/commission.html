@@ -1,0 +1,15 @@
+{% extends 'accounts_base.html' %}
+{% load indian_numbers_tags %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+{% endblock styles %}
+{% block content %}
+      <main>
+            <section class="greetings">
+                <div class="greeting">
+                    <h1>Our expected comission : {{final_mean | floatword_indian }}</h1>
+                </div>
+            </section>
+        </main>
+{% endblock content %}

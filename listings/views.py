@@ -15,6 +15,8 @@ from listings.choices import (
     buy_status,
 )
 from django.template.loader import render_to_string
+import pandas as pd
+import numpy as np
 
 
 def index(request):
@@ -115,3 +117,65 @@ def listing(request, listing_id):
 
 def search(request):
     return render(request, "listings/search.html")
+
+
+def commission(request):
+    avg = 1
+    std_dev = 0.1
+    num_reps = 500
+    num_simulations = 1000
+
+    pct_to_target = np.random.normal(avg, std_dev, num_reps).round(2)
+
+    sales_target_values = [2500000, 5000000, 6000000, 7500000, 8000000, 10000000]
+    sales_target_prob = [0.3, 0.3, 0.2, 0.1, 0.05, 0.05]
+    sales_target = np.random.choice(sales_target_values, num_reps, p=sales_target_prob)
+
+    df = pd.DataFrame(index=range(num_reps), data={"Pct_To_Target": pct_to_target, "Sales_Target": sales_target})
+
+    df["Sales"] = df["Pct_To_Target"] * df["Sales_Target"]
+    df
+
+    def calc_commission_rate(x):
+        """Return the commission rate based on the table:
+        0-90% = 2%
+        91-99% = 3%
+        >= 100 = 4%
+        """
+        if x <= 0.90:
+            return 0.02
+        if x <= 0.99:
+            return 0.03
+        else:
+            return 0.04
+
+    df["Commission_Rate"] = df["Pct_To_Target"].apply(calc_commission_rate)
+    df["Commission_Amount"] = df["Commission_Rate"] * df["Sales"]
+
+    all_stats = []
+
+    for i in range(num_simulations):
+
+        sales_target = np.random.choice(sales_target_values, num_reps, p=sales_target_prob)
+        pct_to_target = np.random.normal(avg, std_dev, num_reps).round(2)
+
+        df = pd.DataFrame(index=range(num_reps), data={"Pct_To_Target": pct_to_target, "Sales_Target": sales_target})
+
+        df["Sales"] = df["Pct_To_Target"] * df["Sales_Target"]
+
+        df["Commission_Rate"] = df["Pct_To_Target"].apply(calc_commission_rate)
+        df["Commission_Amount"] = df["Commission_Rate"] * df["Sales"]
+
+        all_stats.append(
+            [df["Sales"].sum().round(0), df["Commission_Amount"].sum().round(0), df["Sales_Target"].sum().round(0)]
+        )
+
+    results_df = pd.DataFrame.from_records(all_stats, columns=["Sales", "Commission_Amount", "Sales_Target"])
+
+    results_df.describe().style.format("{:,}")
+
+    final_mean = int(results_df["Commission_Amount"].mean())
+
+    context = {"final_mean": final_mean}
+
+    return render(request, "listings/commission.html", context)
