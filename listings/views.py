@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Listing
 from agents.models import Agent
+from django.views.generic import TemplateView
 from django.http import JsonResponse, HttpResponse
 from listings.choices import (
     city_choices,
@@ -123,7 +124,7 @@ def commission(request):
     avg = 1
     std_dev = 0.1
     num_reps = 500
-    num_simulations = 1000
+    num_simulations = 100
 
     pct_to_target = np.random.normal(avg, std_dev, num_reps).round(2)
 
@@ -174,8 +175,28 @@ def commission(request):
 
     results_df.describe().style.format("{:,}")
 
-    final_mean = int(results_df["Commission_Amount"].mean())
+    final_mean = int(results_df["Commission_Amount"].mean()) - 80000000
 
-    context = {"final_mean": final_mean}
+    properties = [8, 6, 2]
+
+    context = {"final_mean": final_mean, "properties": properties}
 
     return render(request, "listings/commission.html", context)
+
+
+class ListingChartView(TemplateView):
+    template_name = "listings/chart.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["qs"] = Listing.objects.all()
+        # city
+        city = [["Bengaluru", 4], ["Mangaluru", 1], ["Hyderabad", 3]]
+        context["city"] = city
+        # state
+        state = [["Karnataka", 5], ["Telangana", 3]]
+        context["state"] = state
+        # category
+        category = [["House", 1], ["Apartment", 4], ["Office", 2], ["Villa", 1]]
+        context["category"] = category
+        return context

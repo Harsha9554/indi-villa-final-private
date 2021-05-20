@@ -7,9 +7,7 @@
             </a>
     </div>
     <ul class="links">
-        <li><a class="nav-button"href="{% url "listings" %}">Listings</a></li>
-        <li><a class="nav-button"href="{% url "commission" %}">Comission</a></li>
-        <li><a class="nav-button"href="http://localhost:8000/admin/">Admin</a></li>
+        <li><a class="nav-button"href="{% url "listings" %}">Properties</a></li>
         <li><a class="divider" href="">I</a></li>
         {% if user.is_authenticated %}
             <li>
@@ -18,6 +16,11 @@
                     <div class="p-dd">
                         <a clas="p-dd-btn" href="">{{user.username}}</a>
                         <div class="p-dd-c">
+                            {%if user.is_superuser %}
+                            <a href="{% url "commission" %}">Analytics</a>
+                            <a href="{% url "chart" %}">Chart</a>
+                            <a href="http://localhost:8000/admin/">Admin</a>
+                            {% endif %}
                             {% if "dashboard" in request.path %}
                                 <form action="{% url "logout" %}" method="POST" id="logout" >
                                     {% csrf_token %}
