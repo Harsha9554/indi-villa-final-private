@@ -1,0 +1,29 @@
+{% extends 'accounts_base.html' %}
+{% load indian_numbers_tags %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/commission.css" %}">
+{% endblock styles %}
+{% block content %}
+      <main>
+            <section class="an">
+                <div class="box">
+                    <h1 class="box-title">Total Properties</h1>
+                    <h2>{{properties.0}}</h2>
+                </div>
+                <div class="box">
+                    <h1 class="box-title">Properties for Sale</h1>
+                    <h2>{{properties.1}}</h2>
+                </div>
+                <div class="box">
+                    <h1 class="box-title">Properties for Rent</h1>
+                    <h2>{{properties.2}}</h2>
+                </div>
+            </section>
+            <section class="greetings">
+                <div class="greeting">
+                    <h3>Our expected comission : {{final_mean | floatword_indian }}</h3>
+                </div>
+            </section>
+        </main>
+{% endblock content %}
