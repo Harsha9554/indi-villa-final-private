@@ -26,14 +26,16 @@ def contact(request):
     )
 
     contact.save()
+    print("CONTACT SAVED")
 
-    send_mail(
-        "Property Listing Inquiry",
-        "There has been an inquiry for " + listing + " .",
-        "indivilla.545@gmail.com",
-        [agent_email],
-        fail_silently=False,
-    )
-    messages.success(request, "Your request has been submitted, a agent will get back to you soon")
+    # send_mail(
+    #     "Property Listing Inquiry",
+    #     "There has been an inquiry for " + listing + " .",
+    #     "indivilla.545@gmail.com",
+    #     [agent_email],
+    #     fail_silently=False,
+    # )
+    # messages.success(request, "Your request has been submitted, a agent will get back to you soon")
 
-    return redirect("/listings/" + listing_id)
+    # return redirect("/listings/" + listing_id)
+    return redirect("/accounts/dashboard")
